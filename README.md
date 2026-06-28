@@ -34,11 +34,10 @@ A fast, accessible personal portfolio built with React (Vite), Tailwind CSS, and
 ## Getting Started
 
 ```
-git clone https://github.com/YOUR_USERNAME/portfolio.git
+git clone https://github.com/Mohammed-Omer-S/portfolio.git
 cd portfolio
 npm install
 npm run dev
-
 ```
 
 Open `http://localhost:5173` to view it locally.
@@ -48,7 +47,6 @@ Open `http://localhost:5173` to view it locally.
 ```
 npm run build      # production build → dist/
 npm run preview     # preview the production build
-
 ```
 
 ## License
