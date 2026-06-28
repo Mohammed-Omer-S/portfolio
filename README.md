@@ -10,7 +10,7 @@ A fast, accessible personal portfolio built with React (Vite), Tailwind CSS, and
 - ♿ **Accessible** — built to WCAG 2.2 AA guidelines, with full keyboard navigation, visible focus states, and `prefers-reduced-motion` support
 - 🎨 **Modern-brutalist design** — monochrome base with a single high-vibrancy accent color
 - 📬 **Working contact form** — integrated with Formspree, no backend required
-- 📊 **Privacy-first analytics** — Plausible Analytics, cookie-less and GDPR-compliant
+- 📊 **Privacy-first analytics** — Cloudflare Web Analytics, cookie-less and GDPR-compliant
 - 📱 **Fully responsive** — mobile-first layout using CSS Grid and Flexbox
 
 ## Tech Stack
@@ -20,11 +20,11 @@ A fast, accessible personal portfolio built with React (Vite), Tailwind CSS, and
 - **Animation:** Framer Motion
 - **Icons:** Lucide React
 - **Forms:** Formspree
-- **Analytics:** Plausible Analytics
+- **Analytics:** Cloudflare Web Analytics
 
 ## Sections
 
-- Hero — value proposition + résumé download
+- Hero — value proposition + resume download
 - Experience & Education — collapsible reverse-chronological timeline
 - Technical Matrix — categorized skill grid with proficiency indicators
 - Projects — filterable, glassmorphism project gallery
