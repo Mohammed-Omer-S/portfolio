@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Respect reduced-motion preference — overrides smooth scroll & disables
+     framer-motion-driven transitions via the .motion-safe-only utility usage in components */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+
+  ::selection {
+    background: theme('colors.accent.DEFAULT');
+    color: theme('colors.ink.950');
+  }
+
+  /* Visible, high-contrast focus ring for keyboard nav — WCAG 2.2 AA */
+  :focus-visible {
+    outline: 2px solid theme('colors.accent.DEFAULT');
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  .container-grid {
+    @apply mx-auto w-full max-w-7xl px-6 md:px-10;
+  }
+
+  .section-label {
+    @apply font-mono text-xs uppercase tracking-[0.25em] text-accent;
+  }
+
+  .btn-brutal {
+    @apply inline-flex items-center gap-2 border-2 border-ink-0 px-6 py-3
+           font-mono text-sm uppercase tracking-wider text-ink-0
+           transition-colors duration-200 hover:bg-ink-0 hover:text-ink-950
+           focus-visible:outline-accent;
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center gap-2 bg-accent px-6 py-3
+           font-mono text-sm uppercase tracking-wider text-ink-950
+           transition-transform duration-200 hover:-translate-y-0.5
+           focus-visible:outline-2 focus-visible:outline-ink-0;
+  }
+
+  .card-glass {
+    @apply rounded-brutal border border-white/10 bg-white/5 backdrop-blur-md
+           transition-all duration-300 hover:border-accent/40;
+  }
+}
+
+/* Skip link for keyboard / screen reader users */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 50;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  background: #D7FF3D;
+  color: #0a0a0a;
+  padding: 0.5rem 1rem;
+  font-family: monospace;
+}
