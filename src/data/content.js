@@ -2,7 +2,7 @@ export const profile = {
   name: 'Mohammed Omer',
   role: 'Software Engineer • MERN Stack Developer',
   tagline: 'I build fast, accessible, and reliable web systems — from pixel to production.',
-  resumeUrl: 'https://drive.google.com/uc?export=download&id=1UowGo9oh2NWky55bEJ6G6PfDzby63W0d',
+  resumeUrl: 'https://drive.google.com/uc?export=download&id=1uxU0SGm6bJg-q1Cn_SMDZwYAswEQj6sI',
   // Replace with the endpoint Formspree gives you after creating a form
   // at https://formspree.io — looks like "https://formspree.io/f/xxxxabcd"
   formspreeEndpoint: 'https://formspree.io/f/mjgqwved',
