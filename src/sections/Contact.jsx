@@ -3,13 +3,6 @@ import { motion } from 'framer-motion';
 import { Send, CheckCircle2 } from 'lucide-react';
 import { profile } from '../data/content.js';
 
-function trackEvent(name) {
-  // Plausible exposes window.plausible once its script has loaded.
-  if (typeof window !== 'undefined' && typeof window.plausible === 'function') {
-    window.plausible(name);
-  }
-}
-
 export default function Contact() {
   const [status, setStatus] = useState('idle'); // idle | submitting | success | error
   const [errors, setErrors] = useState({});
@@ -25,7 +18,7 @@ export default function Contact() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    const formEl = e.currentTarget; // capture the form element NOW, before any await
+    const formEl = e.currentTarget;
     const form = new FormData(formEl);
 
     const validationErrors = validate(form);
@@ -42,9 +35,8 @@ export default function Contact() {
 
       if (!response.ok) throw new Error('Formspree request failed');
 
-      trackEvent('Contact Form Submit');
       setStatus('success');
-      formEl.reset(); // use the captured reference, not e.currentTarget (which is null by now)
+      formEl.reset();
     } catch (err) {
       console.error('Contact form error:', err);
       setStatus('error');
@@ -71,8 +63,6 @@ export default function Contact() {
         </motion.div>
       ) : (
         <form onSubmit={handleSubmit} className="mt-10 max-w-lg space-y-5" noValidate>
-          {/* Honeypot field — invisible to humans, catches simple spam bots.
-              Formspree ignores submissions where this is filled in. */}
           <input type="text" name="_gotcha" tabIndex="-1" autoComplete="off" className="hidden" />
 
           <div>
