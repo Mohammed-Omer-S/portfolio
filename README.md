@@ -2,7 +2,7 @@
 
 A fast, accessible personal portfolio built with React (Vite), Tailwind CSS, and Framer Motion — designed to showcase projects, experience, and skills to recruiters with minimal load time and no unnecessary bloat.
 
-**Live site:** [your-deployed-url-here]
+**Live site:** [https://portfolio-alpha-weld-gmpv5e6i7a.vercel.app](https://portfolio-alpha-weld-gmpv5e6i7a.vercel.app)
 
 ## Features
 

@@ -11,7 +11,7 @@ export const profile = {
     linkedin: 'https://www.linkedin.com/in/mohammed-omer-b8b49325a',
     leetcode: 'https://leetcode.com/u/Mohammed_Omer/',
   },
-  email: 'hello@yourdomain.com',
+  email: 'mohammedomer.pvt@gmail.com',
 };
 
 export const timeline = [
@@ -135,7 +135,7 @@ export const projects = [
     stack: ['React', 'Tailwind CSS', 'HTML', 'Framer Motion', 'Plausible Analytics', 'Formspree'],
     challenges: 'Implemented complex animations while ensuring accessibility by centralizing motion states to respect user preferences.',
     impact: 'Delivered a high-performance site with full WCAG 2.2 AA compliance, balancing sophisticated design with technical efficiency.',
-    links: { github: 'https://github.com/yourhandle/obs-dash' },
+    links: { github: 'https://github.com/Mohammed-Omer-S/portfolio', live: 'https://portfolio-alpha-weld-gmpv5e6i7a.vercel.app' },
   },
 ];
 
